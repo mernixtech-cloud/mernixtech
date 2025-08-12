@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  background: #f0f0f5;
+  color: #1C1C1E;
+}
+
+.shape{
+  width: 98%;
+  height: 98%;
+  border-radius: 48px;
+  position: relative;
+    background-image: linear-gradient(lightgrey, #f0f0f5);
+  clip-path: path('M 40 0 H 113 A 40 40 0 0 1 1200 40 V 512 A 40 40 0 0 1 1160 552 H 672 A 48 48 0 0 1 624 504 V 456 A 48 48 0 0 0 576 408 H 40 A 40 40 0 0 1 0 368 V 40 A 40 40 0 0 1 40 0  Z')
+}
+
+@theme inline{
+  --font-main: var(--font-roboto);
+  --font-header: var(--font-montserrat)
+}
+
+@media (min-width:768px) {
+  .shape{
+    background-image: linear-gradient(to right, lightgrey, #f0f0f5);
+  }
+}
