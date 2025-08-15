@@ -1,43 +1,45 @@
 'use client'
 
-import Image from "next/image"
+import { LuChartNoAxesCombined } from "react-icons/lu";
+import { FaHandsHoldingCircle } from "react-icons/fa6";
+
 import Btn from "../re-useable/Btn"
 
 const HeroSection = () => {
   return (
-    <section className='w-full h-[100vh] min-[1450px]:w-[1440px] min-[1450px]:h-[595px] min-[768px]:h-[95vh] min-[1024px]:h-[100vh] bg-grey flex justify-center items-center flex-col relative font-main'>
-        <svg className="shape"></svg>
-        <div className="w-[90%] h-[98%] flex justify-center items-center absolute">
-            <div className='w-[100%] h-full  pt-3 pb-3  md:w-[50%] flex items-center justify-around flex-col text-center md:text-left min-[1362px]:h-[80%] min-[1440px]:h-[85%] min-[1362px]:items-start'>
+    <section className='w-full pt-2 pb-2 h-auto flex justify-center items-center overflow-hidden font-main'>
+        <div className="w-[90%] min-[1450px]:w-[1440] flex justify-between items-center flex-wrap ">
+            <div className='mt-4 md:w-[50%]'>
                <div> 
-                  <h3>🎯 Let’s turn your website into your lead source.</h3>
-                  <h1 className="text-3xl font-semibold mt-2 mb-2 font-header min-[375px]:text-4xl min-[1024px]:text-[40px]">We Turn Remodelers’ Websites Into Lead Generating Machines</h1>
-                  <h2 className="text-[16px] md:text-justify">From kitchen and bathroom remodels to luxury home renovations and basement finishing, we help contractors showcase their best work, rank higher in searches, and attract more clients.</h2></div>
-                {/* <div className="w-full h-auto flex">
-                  <div className="w-[100px] h-[100px] relative">
-                    <Image src={'/google-review-5.0.png'} alt="" layout="fill" objectFit="contain"/>
+                  <h3 className="text-[14px] ">⭐⭐⭐⭐⭐ Trusted by top remodeling contractors nationwide</h3>
+                  <h1 className="font-bold text-3xl mt-2 mb-2 font-header">Great Remodelers Deserve Better Leads</h1>
+                  <h2 className="text-[14px] ">We help kitchen and bathroom remodeling contractors grow their business using targeted, results-driven digital marketing strategies that attract quality clients.</h2>
+                  <div className='text-[14px] flex mt-2 mb-2'>
+                    <p className='flex items-center justify-between mr-5 h-6'><LuChartNoAxesCombined  className="text-[#eeb644] text-2xl font-black mr-1"/> More Traffic</p>
+                    <p className='flex items-center justify-between  h-6'><FaHandsHoldingCircle  className="text-[#eeb644] text-2xl font-black mr-1"/>Better Lead Quality</p>
                   </div>
-                  <div className="w-[100px] h-[100px] relative">
-                    <Image src={'/facebook-review-5.0.png'} alt="" layout="fill" objectFit="contain"/>
-                  </div>
-                </div> */}
-                <div className="w-full h-auto flex justify-between items-center min-[1362px]:w-[80%]">
-                  <Btn text="Book A Free Strategy Call" back="#007aff" height="55px" width="250px" fontSize="16px" borderRadius="50px" color="#ffff" className="md:w-[200px]"/>
-                  <Btn text="Explore Our Project >>" back="#007aff" height="55px" width="200px" fontSize="16px" borderRadius="50px" color="#ffff" className="md:w-[200px] hidden min-[1024px]:block"/>
+                </div>
+                <div className="mt-3 mb-1">
+                  <Btn text="Book A Free Strategy Call" back="#007aff" height="44px" width="180px" fontSize="14px" borderRadius="50px" color="#ffff" className="md:w-[200px]"/>
                 </div>
             </div>
-            <div className='w-[100px] h-[100px] absolute bottom-16 right-0 md:left-[45%] lg:left-[50%] lg:h-[150px] lg:w-[150px] z-10'>
-                <div className='w-full h-full relative'>
+            {/* <div className=''>
+                <div className=''>
                     <Image src={'/guarantee-seal.png'} alt="" layout="fill" objectFit="contain"/>
                 </div>
-            </div>
-          <div className="w-1/2 h-full hidden md:block relative z-0">
-            <Image
-              src="/Contractor-making-call.png"
+            </div> */}
+          <div className="hdcgudh hidden md:flex h-[85vh] w-[50%] bg-amber-200 justify-center items-center">
+            <img
+              className="object-contain"
+              src="/Flux_Dev_A_happy_kitchen_and_bathroom_remodeling_contractor_wi_2.jpg"
               alt="Contractor making a call"
-              fill
-              className="object-contain scale-x-[-1]"
-              sizes="(max-width: 768px) 90vh, 50vw"
+            />
+          </div>
+          <div className="h-[180px] w-full mt-3 relative min-[375px]:h-[200px] md:hidden">
+            <img
+              className="object-fill absolute -top-20 -right-20 "
+              src="/Flux_Dev_A_happy_kitchen_and_bathroom_remodeling_contractor_wi_3.png"
+              alt="Contractor making a call"
             />
           </div>
         </div>

@@ -6,8 +6,8 @@ import Btn from './re-useable/Btn'
 
 const Header = () => {
   return (
-    <header className='font-header font-bold h-[44px] top-0 w-full bg-[#ffffff] flex justify-center items-center sticky z-[100]' >
-        <div className='w-[90%] h-[90%] flex justify-between min-[1440px]:w-[1440] items-center'>
+    <header className='font-header font-bold h-[44px] top-0 w-full bg-[#ffffff] flex justify-center items-center md:sticky z-[100]' >
+        <div className='w-[90%] h-[90%] flex justify-between min-[1450px]:w-[1440] items-center'>
             <span className='w-[100px] h-auto flex justify-between items-center'>
                 <Image priority alt='mernixtech-agency-logo' src={'/mernixtech-agency-logo.png'} height={17} width={17}/>
                 Mernixtech

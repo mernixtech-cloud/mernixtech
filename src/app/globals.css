@@ -7,11 +7,15 @@
 
 .shape{
   width: 98%;
-  height: 98%;
+  height: 100vh;
   border-radius: 48px;
-  position: relative;
-    background-image: linear-gradient(lightgrey, #f0f0f5);
-  clip-path: path('M 40 0 H 113 A 40 40 0 0 1 1200 40 V 512 A 40 40 0 0 1 1160 552 H 672 A 48 48 0 0 1 624 504 V 456 A 48 48 0 0 0 576 408 H 40 A 40 40 0 0 1 0 368 V 40 A 40 40 0 0 1 40 0  Z')
+    /* background-image: linear-gradient(lightgrey, #f0f0f5); */
+    background:red;
+  clip-path: path("M 0 50 Q 0 0 50 0 H calc(100% - 50px) Q 100% 0 100% 50 V calc(100% - 50px) Q 100% 100% calc(100% - 50px) 100% H 300 Q 250 100% 250 calc(100% - 50px) V calc(100% - 50px) Q 250 calc(100% - 50px) 200 calc(100% - 50px) H 50 Q 0 calc(100% - 50px) 0 calc(100% - 100px) Z");
+}
+
+.hdcgudh{
+  background-image: linear-gradient(transparent, #f0f0f5);
 }
 
 @theme inline{
