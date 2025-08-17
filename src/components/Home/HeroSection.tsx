@@ -7,16 +7,16 @@ import Btn from "../re-useable/Btn"
 
 const HeroSection = () => {
   return (
-    <section className='w-full pt-2 pb-2 h-auto flex justify-center items-center overflow-hidden font-main'>
+    <section className='w-full pt-2 pb-2 bg-[grey] flex justify-center items-center overflow-hidden font-main'>
         <div className="w-[90%] min-[1450px]:w-[1440] flex justify-between items-center flex-wrap ">
             <div className='mt-4 md:w-[50%]'>
                <div> 
-                  <h3 className="text-[14px] ">⭐⭐⭐⭐⭐ Trusted by top remodeling contractors nationwide</h3>
+                  <h3 className="text-[16px] ">⭐⭐⭐⭐⭐ Trusted by top remodeling contractors nationwide</h3>
                   <h1 className="font-bold text-3xl mt-2 mb-2 font-header">Great Remodelers Deserve Better Leads</h1>
-                  <h2 className="text-[14px] ">We help kitchen and bathroom remodeling contractors grow their business using targeted, results-driven digital marketing strategies that attract quality clients.</h2>
-                  <div className='text-[14px] flex mt-2 mb-2'>
-                    <p className='flex items-center justify-between mr-5 h-6'><LuChartNoAxesCombined  className="text-[#eeb644] text-2xl font-black mr-1"/> More Traffic</p>
-                    <p className='flex items-center justify-between  h-6'><FaHandsHoldingCircle  className="text-[#eeb644] text-2xl font-black mr-1"/>Better Lead Quality</p>
+                  <h2 className="text-[16px] ">We help kitchen and bathroom remodeling contractors grow their business using targeted, results-driven digital marketing strategies that attract quality clients.</h2>
+                  <div className='text-[16px] flex mt-2 mb-2'>
+                    <p className='flex items-center justify-between mr-5 h-6'><LuChartNoAxesCombined  className="text-[#eeb644] text-[18px] font-black mr-1"/> More Traffic</p>
+                    <p className='flex items-center justify-between  h-6'><FaHandsHoldingCircle  className="text-[#eeb644] text-[18px] font-black mr-1"/>Better Lead Quality</p>
                   </div>
                 </div>
                 <div className="mt-3 mb-1">
