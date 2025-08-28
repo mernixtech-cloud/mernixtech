@@ -12,7 +12,7 @@ const HeroSection = () => {
             <div className='mt-4 md:w-[50%]'>
                <div> 
                   <h3 className="text-[16px] lg:text-[18px]">⭐⭐⭐⭐⭐ Trusted by top remodeling contractors nationwide</h3>
-                  <h1 className="font-bold text-2xl font-header md:text-[32px] lg:text-5xl">Great Remodelers Deserve to Be Found Online.</h1>
+                  <h1 className="font-bold font-header text-[32px] lg:text-5xl">Great Remodelers Deserve to Be Found Online.</h1>
                   <h2 className="text-[16px] md:text-[17px] lg:text-[18px] lg:w-[80%]">We craft websites that rank, sell, and deliver steady jobs, built for contractors who take pride in their work.</h2>
                   <div className='text-[16px] flex'>
                     <p className='flex items-center justify-between mr-3.5 h-6  md:text-[18px] lg:text-[18px]'><LuChartNoAxesCombined  className="text-[#eeb644] text-[18px] font-black mr-1 lg:text-[18px]"/> More Traffic</p>
