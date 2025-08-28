@@ -5,17 +5,8 @@
   color: #1C1C1E;
 }
 
-.shape{
-  width: 98%;
-  height: 100vh;
-  border-radius: 48px;
-    /* background-image: linear-gradient(lightgrey, #f0f0f5); */
-    background:red;
-  clip-path: path("M 0 50 Q 0 0 50 0 H calc(100% - 50px) Q 100% 0 100% 50 V calc(100% - 50px) Q 100% 100% calc(100% - 50px) 100% H 300 Q 250 100% 250 calc(100% - 50px) V calc(100% - 50px) Q 250 calc(100% - 50px) 200 calc(100% - 50px) H 50 Q 0 calc(100% - 50px) 0 calc(100% - 100px) Z");
-}
-
 .hdcgudh{
-  background-image: linear-gradient(transparent, #f0f0f5);
+  background-image: linear-gradient(to right,  #f0f0f5, transparent);
 }
 
 @theme inline{
@@ -23,8 +14,67 @@
   --font-header: var(--font-montserrat)
 }
 
-@media (min-width:768px) {
-  .shape{
-    background-image: linear-gradient(to right, lightgrey, #f0f0f5);
+/* Base typography */
+body {    /* Adjust globally if needed */
+  line-height: 1.6;       /* Comfortable line height */
+  color: #333;            /* Dark gray for readability */
+}
+
+.box1{
+  height: 100%;
+  width: 100%;
+  background-image: url('../../public/Flux_Dev_A_skilled_remodeler_in_dirty_work_clothes_sitting_on__2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #575757;
+  opacity: inherit;
+  background-blend-mode: overlay;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.box2{
+  height: 100%;
+  width: 100%;
+  background-image: url('../../public/Flux_Dev_Same_remodeler_now_smiling_reviewing_a_laptoptablet_s_0.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #2e2d2d;
+  opacity: inherit;
+  background-blend-mode: overlay;
+}
+
+/* Paragraph spacing */
+p {
+  margin-bottom: 1.5em;   /* ~24px on 16px font */
+}
+
+/* Headings spacing */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;       /* Tighter for headings */
+  margin-top: 0.4em;        /* More space above */
+  margin-bottom: 0.4em;   /* Less space below so it connects with content */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) { /* Tablets */
+  body {
+    line-height: 1.6;
+  }
+  p {
+    margin-bottom: 1em; /* Slightly tighter */
+  }
+}
+
+@media (max-width: 480px) { /* Mobiles */
+  body {
+    line-height: 1.5;
+  }
+  p {
+    margin-bottom: 0.3em; /* Even tighter for small screens */
   }
 }
