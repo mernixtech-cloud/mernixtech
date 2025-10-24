@@ -5,6 +5,12 @@
   color: #1C1C1E;
 }
 
+.slider-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .hdcgudh{
   background-image: linear-gradient(to right,  #f0f0f5, transparent);
 }

@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { TbMenu } from "react-icons/tb";
-import Btn from './re-useable/Btn'
+import Btn from './Btn'
 
 
 const Header = () => {
@@ -14,14 +14,14 @@ const Header = () => {
             </span>
             <div className='w-[47%] font-main font-normal h-[100%] hidden justify-between items-center min-[800px]:flex lg:w-[37%]'>
                 <ul className='w-[70%] text-[12px] flex justify-between items-center'>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Services</li>
-                    <li>Portfolio</li>
+                    <li className='cursor-pointer'>Home</li>
+                    <li className='cursor-pointer'>About Us</li>
+                    <li className='cursor-pointer'>Services</li>
+                    <li className='cursor-pointer'>Portfolio</li>
                 </ul>
-                <Btn height="33px" width="95px" fontSize='12px' back="#007aff" color='#ffffff' borderRadius='5px' text='Contact Us'/>
+                <Btn height="33px" width="95px" fontSize='12px' back="#007aff" color='#ffffff' borderRadius='5px' text='Contact Us' className='cursor-pointer'/>
             </div>
-            <TbMenu className='min-[800px]:hidden text-2xl text-[#3A3A3C]'/> 
+            <TbMenu className='min-[800px]:hidden text-2xl text-[#3A3A3C] cursor-pointer'/> 
         </div>
     </header>
   )

@@ -3,7 +3,7 @@
 import { LuChartNoAxesCombined } from "react-icons/lu";
 import { FaHandsHoldingCircle } from "react-icons/fa6";
 
-import Btn from "../re-useable/Btn"
+import Btn from "../../components/Btn"
 
 const HeroSection = () => {
   return (
@@ -11,17 +11,17 @@ const HeroSection = () => {
         <div className="w-[90%] min-[1450px]:w-[1440px] flex justify-between items-center flex-wrap ">
             <div className='mt-4 md:w-[50%]'>
                <div> 
-                  <h3 className="text-[16px] lg:text-[18px]">⭐⭐⭐⭐⭐ Trusted by top remodeling contractors nationwide</h3>
-                  <h1 className="font-bold font-header text-[32px] lg:text-5xl">Great Remodelers Deserve to Be Found Online.</h1>
-                  <h2 className="text-[16px] md:text-[17px] lg:text-[18px] lg:w-[80%]">We craft websites that rank, sell, and deliver steady jobs, built for contractors who take pride in their work.</h2>
+                  <h3 className="text-[16px] lg:text-[18px]">⭐⭐⭐⭐⭐ Trusted by remodeling pros nationwide</h3>
+                  <h1 className="font-bold font-header text-[32px] lg:text-5xl">Remodelers Lose Jobs When They’re Invisible Online.</h1>
+                  <h2 className="text-[16px] md:text-[17px] lg:text-[18px] lg:w-[80%]">Get 20+ new leads monthly with a simple SEO + website system built for remodelers.</h2>
                   <div className='text-[16px] flex'>
                     <p className='flex items-center justify-between mr-3.5 h-6  md:text-[18px] lg:text-[18px]'><LuChartNoAxesCombined  className="text-[#eeb644] text-[18px] font-black mr-1 lg:text-[18px]"/> More Traffic</p>
                     <p className='flex items-center justify-between  h-6  md:text-[18px] lg:text-[18px]'><FaHandsHoldingCircle  className="text-[#eeb644] text-[18px] font-black mr-1 lg:text-[18px]"/>Better Lead Quality</p>
                   </div>
                 </div>
                 <div className="mt-3 mb-1 md:m-0 md:flex">
-                  <Btn text="Book A Free Strategy Call" back="#007aff" height="44px" width="189px" fontSize="14px" borderRadius="50px" color="#ffff" className="shadow-lg md:w-[250px] lg:text-[18px]"/>
-                  <Btn text="Download our free guide" height="44px" width="189px" fontSize="14px" borderRadius="50px" color="#333333" className="hidden ml-2 md:block md:w-[250px] lg:text-[18px] shadow-inner border-[#51B0D7] border-2"/>
+                  <Btn text="Get a Free Site & SEO Audit" back="#007aff" height="44px" width="189px" fontSize="13px" borderRadius="50px" color="#ffff" className="shadow-lg md:w-[250px] lg:text-[18px] cursor-pointer outline-0"/>
+                  <Btn text="Download Free Guide" height="44px" width="189px" fontSize="13px" borderRadius="50px" color="#333333" className="hidden ml-2 md:block md:w-[250px] lg:text-[18px] shadow-inner border-[#51B0D7] border-2 cursor-pointer "/>
                 </div>
             </div>
             {/* <div className=''>
