@@ -1,86 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 @import "tailwindcss";
 
-:root {
-  background: #f0f0f5;
-  color: #1C1C1E;
+@theme {
+  /* Fonts */
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-display: Space Grotesk, Inter, system-ui, sans-serif;
+
+  /* Radius */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* Shadows */
+  --shadow-glow: var(--shadow-glow);
+
+  /* Colors */
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  /* Sidebar */
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  /* Brand */
+  --color-brand-dark: hsl(var(--brand-dark));
+  --color-brand-gray: hsl(var(--brand-gray));
+  --color-brand-light: hsl(var(--brand-light));
+  --color-brand-blue: hsl(var(--brand-blue));
+  --color-brand-blue-light: hsl(var(--brand-blue-light));
+
+  /* Animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse 3s ease-in-out infinite;
 }
 
-.slider-container {
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
+/* Keyframes */
+@keyframes accordion-down {
+  from { height: 0 }
+  to { height: var(--radix-accordion-content-height) }
 }
 
-.hdcgudh{
-  background-image: linear-gradient(to right,  #f0f0f5, transparent);
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height) }
+  to { height: 0 }
 }
 
-@theme inline{
-  --font-main: var(--font-roboto);
-  --font-header: var(--font-montserrat)
+@keyframes float {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(-10px) }
 }
 
-/* Base typography */
-body {    /* Adjust globally if needed */
-  line-height: 1.6;       /* Comfortable line height */
-  color: #333;            /* Dark gray for readability */
+@keyframes pulse {
+  0%, 100% { opacity: 1 }
+  50% { opacity: 0.5 }
 }
 
-.box1{
-  height: 100%;
-  width: 100%;
-  background-image: url('../../public/Flux_Dev_A_skilled_remodeler_in_dirty_work_clothes_sitting_on__2.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #575757;
-  opacity: inherit;
-  background-blend-mode: overlay;
-  border-radius: 20px;
-  overflow: hidden;
+
+/* MernixTech Design System - Premium Agency Aesthetic */
+
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 220 10% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 10% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 12%;
+
+    /* Primary - Trust Blue */
+    --primary: 210 100% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light Gray */
+    --secondary: 220 10% 97%;
+    --secondary-foreground: 220 10% 12%;
+
+    /* Muted - Subtle Backgrounds */
+    --muted: 220 10% 97%;
+    --muted-foreground: 220 10% 46%;
+
+    /* Accent - Soft Blue Tint */
+    --accent: 210 100% 97%;
+    --accent-foreground: 210 100% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 210 100% 40%;
+
+    --radius: 0.75rem;
+
+    /* Custom Brand Extensions */
+    --brand-dark: 220 10% 12%;
+    --brand-gray: 220 10% 46%;
+    --brand-light: 220 10% 97%;
+    --brand-blue: 210 100% 40%;
+    --brand-blue-light: 210 100% 95%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 40%) 0%, hsl(210 100% 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 10% 97%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(220 10% 12%) 0%, hsl(220 15% 18%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    --shadow-glow: 0 0 40px rgba(0, 102, 204, 0.15);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 10% 26%;
+    --sidebar-primary: 210 100% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 10% 96%;
+    --sidebar-accent-foreground: 220 10% 12%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 210 100% 40%;
+  }
+
+  .dark {
+    --background: 220 15% 8%;
+    --foreground: 220 10% 97%;
+
+    --card: 220 15% 10%;
+    --card-foreground: 220 10% 97%;
+
+    --popover: 220 15% 10%;
+    --popover-foreground: 220 10% 97%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 220 10% 97%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 65%;
+
+    --accent: 210 100% 15%;
+    --accent-foreground: 210 100% 60%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 210 100% 50%;
+
+    --sidebar-background: 220 15% 8%;
+    --sidebar-foreground: 220 10% 90%;
+    --sidebar-primary: 210 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 220 10% 97%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 210 100% 50%;
+  }
 }
 
-.box2{
-  height: 100%;
-  width: 100%;
-  background-image: url('../../public/Flux_Dev_Same_remodeler_now_smiling_reviewing_a_laptoptablet_s_0.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: #2e2d2d;
-  opacity: inherit;
-  background-blend-mode: overlay;
-}
+@layer base {
+  * {
+    @apply border-border;
+  }
 
-/* Paragraph spacing */
-p {
-  margin-bottom: 1.5em;   /* ~24px on 16px font */
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-/* Headings spacing */
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.3;       /* Tighter for headings */
-  margin-top: 0.4em;        /* More space above */
-  margin-bottom: 0.4em;   /* Less space below so it connects with content */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) { /* Tablets */
   body {
-    line-height: 1.6;
+    @apply bg-background text-foreground font-sans antialiased;
   }
-  p {
-    margin-bottom: 1em; /* Slightly tighter */
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight;
   }
 }
 
-@media (max-width: 480px) { /* Mobiles */
-  body {
-    line-height: 1.5;
+@layer components {
+  .container-wide {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
-  p {
-    margin-bottom: 0.3em; /* Even tighter for small screens */
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80;
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-lg border border-white/20;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .link-underline {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
   }
 }
